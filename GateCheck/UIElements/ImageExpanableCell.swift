@@ -49,6 +49,7 @@ class ImageExpanableCell: DetailCell {
   
   @IBAction func tapOnToggleImagePanel(sender: UIButton!) {
     setImagePanelHidden(imagePanelView.isHidden == false, animated: true)
+    resignFirstResponder()
   }
   
   func setImagePanelHidden(_ isHidden: Bool, animated: Bool) {

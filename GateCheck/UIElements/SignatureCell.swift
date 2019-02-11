@@ -10,6 +10,7 @@ import UIKit
 import Material
 
 struct SignatureCellModel: ImageExpanableCellModel {
+  var rowId: String
   var type: RowType
   var identifier: String
   var title: String
@@ -19,6 +20,7 @@ struct SignatureCellModel: ImageExpanableCellModel {
   var imageUrls: [String]
   
   init() {
+    rowId = ""
     type = .signature
     identifier = "SignatureCell"
     title = ""
@@ -49,10 +51,10 @@ class SignatureCell: ImageExpanableCell {
   
   override func displayCell(_ cellModel: DetailCellModel) {
     guard let cellModel = cellModel as? SignatureCellModel else { return }
-    
+    rowId = cellModel.rowId
     titleLabel.text = cellModel.title
     approverTextField.text = cellModel.approver
-    approverTextField.text = cellModel.placeHolder
+    approverTextField.placeholder = cellModel.placeHolder
     urlImages = cellModel.imageUrls
     displayImages()
   }

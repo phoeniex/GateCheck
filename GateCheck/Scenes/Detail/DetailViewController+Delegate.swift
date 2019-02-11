@@ -13,8 +13,9 @@ extension DetailViewController: DetailCellDelegate {
   
   func willAddImage(_ cell: DetailCell) {
     let imagePicker = DKImagePickerController()
+    let id = cell.rowId
     imagePicker.didSelectAssets = { [weak self] (assets) in
-      self?.updateImageFor(id: 123, assets)
+      self?.updateImageFor(id: id, assets)
     }
     
     imagePicker.providesPresentationContextTransitionStyle = true

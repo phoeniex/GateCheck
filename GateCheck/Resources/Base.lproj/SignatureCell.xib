@@ -22,13 +22,13 @@
                         <rect key="frame" x="0.0" y="8" width="375" height="185.5"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Xw-CJ-Nwj">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="18"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="17.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Efv-QD-PUY">
-                                <rect key="frame" x="0.0" y="18" width="375" height="59.5"/>
+                                <rect key="frame" x="0.0" y="17.5" width="375" height="60"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WFU-vR-qb4" customClass="TextField" customModule="Material">
                                         <rect key="frame" x="0.0" y="11" width="311" height="38"/>
@@ -43,7 +43,7 @@
                                                 <color key="value" red="0.0" green="0.23921568630000001" blue="0.35686274509999999" alpha="1" colorSpace="calibratedRGB"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="placeholderVerticalOffset">
-                                                <integer key="value" value="10"/>
+                                                <integer key="value" value="12"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
@@ -95,6 +95,9 @@
                                         </constraints>
                                     </view>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="E11-Jq-Td7"/>
+                                </constraints>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oju-d7-4OY">
                                 <rect key="frame" x="0.0" y="77.5" width="375" height="108"/>

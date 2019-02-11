@@ -10,12 +10,14 @@ import UIKit
 import Material
 
 struct DateFormCellModel: DetailCellModel {
+  var rowId: String
   var type: RowType
   var identifier: String
   var dateString: String
   var placeHolder: String
   
   init() {
+    rowId = ""
     type = .dateTime
     identifier = "DateFormCell"
     dateString = ""
@@ -42,7 +44,7 @@ class DateFormCell: DetailCell {
   
   override func displayCell(_ cellModel: DetailCellModel) {
     guard let cellModel = cellModel as? DateFormCellModel else { return }
-    
+    rowId = cellModel.rowId
     dateTextField.text = cellModel.dateString
     dateTextField.placeholder = cellModel.placeHolder
   }

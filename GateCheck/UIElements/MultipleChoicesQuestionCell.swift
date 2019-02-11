@@ -11,6 +11,7 @@ import Material
 import Kingfisher
 
 struct MultipleChoicesQuestionCellModel: ImageExpanableCellModel {
+  var rowId: String
   var type: RowType
   var identifier: String
   var question: String
@@ -25,6 +26,7 @@ struct MultipleChoicesQuestionCellModel: ImageExpanableCellModel {
   var imageUrls: [String]
   
   init() {
+    rowId = ""
     type = .multipleChoiceQuestion
     identifier = "MultipleChoicesQuestionCell"
     question = ""
@@ -88,7 +90,7 @@ class MultipleChoicesQuestionCell: ImageExpanableCell {
   
   override func displayCell(_ cellModel: DetailCellModel) {
     guard let cellModel = cellModel as? MultipleChoicesQuestionCellModel else { return }
-    
+    rowId = cellModel.rowId
     titleLabel.text = cellModel.question
     noteTextField.text = cellModel.note
     usernameTextField.text = cellModel.approver

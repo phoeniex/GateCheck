@@ -10,6 +10,7 @@ import UIKit
 import Material
 
 struct RadioBoxWithTextCellModel: DetailCellModel {
+  var rowId: String
   var type: RowType
   var identifier: String
   var title: String
@@ -19,6 +20,7 @@ struct RadioBoxWithTextCellModel: DetailCellModel {
   var choiceSelected: Int?
   
   init() {
+    rowId = ""
     type = .radioBoxWithText
     identifier = "RadioBoxWithTextCell"
     title = ""
@@ -47,7 +49,7 @@ class RadioBoxWithTextCell: DetailCell {
   
   override func displayCell(_ cellModel: DetailCellModel) {
     guard let cellModel = cellModel as? RadioBoxWithTextCellModel else { return }
-    
+    rowId = cellModel.rowId
     titleLabel.text = cellModel.title
     textField.text = cellModel.text
     textField.placeholder = cellModel.placeHolder

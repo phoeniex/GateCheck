@@ -10,12 +10,14 @@ import UIKit
 import Material
 
 struct TextFormCellModel: DetailCellModel {
+  var rowId: String
   var type: RowType
   var identifier: String
   var text: String
   var placeHolder: String
   
   init() {
+    rowId = ""
     type = .text
     identifier = "TextFormCell"
     text = ""
@@ -40,7 +42,7 @@ class TextFormCell: DetailCell {
   
   override func displayCell(_ cellModel: DetailCellModel) {
     guard let cellModel = cellModel as? TextFormCellModel else { return }
-    
+    rowId = cellModel.rowId
     textField.text = cellModel.text
     textField.placeholder = cellModel.placeHolder
   }

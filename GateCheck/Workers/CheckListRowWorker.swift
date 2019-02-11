@@ -64,12 +64,14 @@ extension CheckListDetail {
   
   func toTitleCellModel() -> DetailCellModel {
     var cellModel = TitleCellModel()
+    cellModel.rowId = id
     cellModel.title = title
     return cellModel
   }
   
   func toTextFormCellModel() -> DetailCellModel {
     var cellModel = TextFormCellModel()
+    cellModel.rowId = id
     cellModel.text = textValue
     cellModel.placeHolder = title
     return cellModel
@@ -77,6 +79,7 @@ extension CheckListDetail {
   
   func toDateFormCellModel() -> DetailCellModel {
     var cellModel = DateFormCellModel()
+    cellModel.rowId = id
     cellModel.dateString = textValue
     cellModel.placeHolder = title
     return cellModel
@@ -84,14 +87,19 @@ extension CheckListDetail {
   
   func toSignatureCellModel() -> DetailCellModel {
     var cellModel = SignatureCellModel()
+    cellModel.rowId = id
     cellModel.title = title
     cellModel.approver = approverValue
     cellModel.imageUrls = fileObjects
+    if let textDataFlagIndex = dataTypeObjects.firstIndex(of: .text) {
+      cellModel.placeHolder = placeHolderObjects[textDataFlagIndex] ?? ""
+    }
     return cellModel
   }
   
   func toRadioBoxWithTextCellModel() -> DetailCellModel {
     var cellModel = RadioBoxWithTextCellModel()
+    cellModel.rowId = id
     cellModel.title = title
     cellModel.text = textValue
     
@@ -111,6 +119,7 @@ extension CheckListDetail {
     
   func toCheckBoxWithTextCellModel() -> DetailCellModel {
     var cellModel = CheckBoxWithTextCellModel()
+    cellModel.rowId = id
     cellModel.text = textValue
     cellModel.isSelected = checkBoxValue.isEmpty == false
     
@@ -124,6 +133,7 @@ extension CheckListDetail {
   
   func toMultipleChoicesQuestionCellModel() -> DetailCellModel {
     var cellModel = MultipleChoicesQuestionCellModel()
+    cellModel.rowId = id
     cellModel.question = title
     
     let choicePlaceHolder = placeHolderObjects[0]

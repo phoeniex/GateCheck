@@ -10,6 +10,7 @@ import UIKit
 import Material
 
 struct CheckBoxWithTextCellModel: DetailCellModel {
+  var rowId: String
   var type: RowType
   var identifier: String
   var text: String
@@ -17,6 +18,7 @@ struct CheckBoxWithTextCellModel: DetailCellModel {
   var isSelected: Bool
   
   init() {
+    rowId = ""
     type = .checkBoxWithText
     identifier = "CheckBoxWithTextCell"
     text = ""
@@ -45,7 +47,7 @@ class CheckBoxWithTextCell: DetailCell {
   
   override func displayCell(_ cellModel: DetailCellModel) {
     guard let cellModel = cellModel as? CheckBoxWithTextCellModel else { return }
-    
+    rowId = cellModel.rowId
     textField.text = cellModel.text
     textField.placeholder = cellModel.placeHolder
     

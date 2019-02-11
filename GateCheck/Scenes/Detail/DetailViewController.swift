@@ -74,7 +74,7 @@ class DetailViewController: UIViewController, DetailDisplayLogic {
     interactor?.fetchCheckListDetail(Detail.FetchCheckListDetail.Request())
   }
   
-  func updateImageFor(id: Int, _ asset: [DKAsset]) {
+  func updateImageFor(id: String, _ asset: [DKAsset]) {
     
   }
   

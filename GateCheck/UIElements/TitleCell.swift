@@ -9,11 +9,13 @@
 import UIKit
 
 struct TitleCellModel: DetailCellModel {
+  var rowId: String
   var type: RowType
   var identifier: String
   var title: String
   
   init() {
+    rowId = ""
     type = .text
     identifier = "TitleCell"
     title = ""
@@ -32,6 +34,7 @@ class TitleCell: DetailCell {
   
   override func displayCell(_ cellModel: DetailCellModel) {
     guard let cellModel = cellModel as? TitleCellModel else { return }
+    rowId = cellModel.rowId
     titleLabel.text = cellModel.title
   }
 

@@ -28,12 +28,14 @@ protocol DetailCellDelegate: class {
 }
 
 protocol DetailCellModel {
+  var rowId: String { get set }
   var type: RowType { get set }
   var identifier: String { get set }
 }
 
 class DetailCell: UITableViewCell {
   
+  var rowId = ""
   var height: CGFloat = 0
   weak var delegate: DetailCellDelegate?
   
