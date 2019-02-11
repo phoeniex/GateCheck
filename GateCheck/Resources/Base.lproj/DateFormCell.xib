@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="DateFormCell" rowHeight="54" id="1zY-2E-o80" customClass="DateFormCell" customModule="GateCheck" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="448" height="54"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1zY-2E-o80" id="Jio-u5-5bz">
+                <rect key="frame" x="0.0" y="0.0" width="448" height="53.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="tb0-C0-msd">
+                        <rect key="frame" x="8" y="8.5" width="440" height="38"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AFe-MI-aOd">
+                                <rect key="frame" x="0.0" y="12" width="14" height="14"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="14" id="0kc-Rv-maS"/>
+                                    <constraint firstAttribute="width" constant="14" id="whR-B4-aJ7"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BrS-kZ-vUg" customClass="TextField" customModule="Material">
+                                <rect key="frame" x="22" y="0.0" width="418" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="nmk-5P-mS1"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="dividerColor">
+                                        <color key="value" red="0.0" green="0.23921568630000001" blue="0.35686274509999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="placeholderVerticalOffset">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="BrS-kZ-vUg" firstAttribute="top" secondItem="tb0-C0-msd" secondAttribute="top" id="8iq-J0-Nhy"/>
+                            <constraint firstAttribute="bottom" secondItem="BrS-kZ-vUg" secondAttribute="bottom" id="J5a-GT-eei"/>
+                        </constraints>
+                    </stackView>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="tb0-C0-msd" secondAttribute="bottom" constant="8" id="7Fi-eM-kXr"/>
+                    <constraint firstAttribute="trailing" secondItem="tb0-C0-msd" secondAttribute="trailing" id="Uuq-NC-4a5"/>
+                    <constraint firstItem="tb0-C0-msd" firstAttribute="leading" secondItem="Jio-u5-5bz" secondAttribute="leading" constant="8" id="dEe-PV-AT5"/>
+                    <constraint firstItem="tb0-C0-msd" firstAttribute="top" secondItem="Jio-u5-5bz" secondAttribute="top" constant="8" id="ein-G1-ryW"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="dateTextField" destination="BrS-kZ-vUg" id="gnO-e4-D0t"/>
+                <outlet property="iconImageView" destination="AFe-MI-aOd" id="HmG-Xs-qzh"/>
+            </connections>
+            <point key="canvasLocation" x="-22.399999999999999" y="183.95802098950526"/>
+        </tableViewCell>
+    </objects>
+</document>

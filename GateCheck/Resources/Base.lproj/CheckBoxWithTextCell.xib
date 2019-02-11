@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="CheckBoxWithTextCell" rowHeight="54" id="1Qc-h5-RbS" customClass="CheckBoxWithTextCell" customModule="GateCheck" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="448" height="54"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1Qc-h5-RbS" id="ZDT-yU-VnV">
+                <rect key="frame" x="0.0" y="0.0" width="448" height="53.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="QsQ-gX-g6g">
+                        <rect key="frame" x="0.0" y="8.5" width="448" height="38"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C1L-CT-Q1s">
+                                <rect key="frame" x="0.0" y="0.0" width="38" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="C1L-CT-Q1s" secondAttribute="height" id="ZZK-3O-MzS"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="tapOnCheckBoxWithSender:" destination="1Qc-h5-RbS" eventType="touchUpInside" id="HSM-B4-qTG"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bCj-Bp-8Zv" customClass="TextField" customModule="Material">
+                                <rect key="frame" x="38" y="0.0" width="410" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="m6f-Tc-Pjo"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="dividerColor">
+                                        <color key="value" red="0.0" green="0.23921568630000001" blue="0.35686274509999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="placeholderVerticalOffset">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="C1L-CT-Q1s" secondAttribute="bottom" id="Qhy-HT-B7V"/>
+                            <constraint firstItem="C1L-CT-Q1s" firstAttribute="top" secondItem="QsQ-gX-g6g" secondAttribute="top" id="fuH-Xl-Qpg"/>
+                            <constraint firstAttribute="bottom" secondItem="bCj-Bp-8Zv" secondAttribute="bottom" id="t0I-Zj-CE7"/>
+                            <constraint firstItem="bCj-Bp-8Zv" firstAttribute="top" secondItem="QsQ-gX-g6g" secondAttribute="top" id="vG7-K7-Fyo"/>
+                        </constraints>
+                    </stackView>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="QsQ-gX-g6g" firstAttribute="leading" secondItem="ZDT-yU-VnV" secondAttribute="leading" id="2Uy-77-kHU"/>
+                    <constraint firstAttribute="bottom" secondItem="QsQ-gX-g6g" secondAttribute="bottom" constant="8" id="3tG-em-66H"/>
+                    <constraint firstItem="QsQ-gX-g6g" firstAttribute="top" secondItem="ZDT-yU-VnV" secondAttribute="top" constant="8" id="VkU-lU-MrB"/>
+                    <constraint firstAttribute="trailing" secondItem="QsQ-gX-g6g" secondAttribute="trailing" id="own-HX-P4T"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="checkButton" destination="C1L-CT-Q1s" id="XLX-pG-H2h"/>
+                <outlet property="textField" destination="bCj-Bp-8Zv" id="hUk-OC-pxR"/>
+            </connections>
+            <point key="canvasLocation" x="-22.399999999999999" y="183.95802098950526"/>
+        </tableViewCell>
+    </objects>
+</document>
