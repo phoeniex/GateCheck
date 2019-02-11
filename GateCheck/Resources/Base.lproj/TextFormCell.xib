@@ -44,7 +44,7 @@
                     <constraint firstItem="nS2-Xp-LNv" firstAttribute="leading" secondItem="ddQ-HT-R8c" secondAttribute="leading" id="lmv-Ue-boN"/>
                 </constraints>
             </tableViewCellContentView>
-            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="textField" destination="nS2-Xp-LNv" id="4lv-z6-tju"/>
             </connections>

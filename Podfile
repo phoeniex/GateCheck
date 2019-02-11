@@ -10,5 +10,6 @@ target 'GateCheck' do
   pod 'DKImagePickerController'
   pod 'SwiftRuler'
   pod 'YPDrawSignatureView'
+  pod 'Kingfisher'
   
 end

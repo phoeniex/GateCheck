@@ -53,7 +53,8 @@ class SignatureCell: ImageExpanableCell {
     titleLabel.text = cellModel.title
     approverTextField.text = cellModel.approver
     approverTextField.text = cellModel.placeHolder
-    setImagePanelHidden(cellModel.isImagePanelHidden, animated: false)
+    urlImages = cellModel.imageUrls
+    displayImages()
   }
   
 }

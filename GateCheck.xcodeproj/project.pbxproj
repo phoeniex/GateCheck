@@ -28,6 +28,7 @@
 		E231FF1121F386A700537FF4 /* ImageCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E231FF0F21F386A700537FF4 /* ImageCollectionCell.xib */; };
 		E231FF1321F3880900537FF4 /* ImageCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E231FF1221F3880900537FF4 /* ImageCollectionView.swift */; };
 		E231FF1521F38E5800537FF4 /* DetailViewController+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E231FF1421F38E5800537FF4 /* DetailViewController+Delegate.swift */; };
+		E26C99B422120CB7008565EE /* DKImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26C99B322120CB7008565EE /* DKImageProvider.swift */; };
 		E270482D21FD8C8100B4AB42 /* DetailViewController+Table.swift in Sources */ = {isa = PBXBuildFile; fileRef = E270482C21FD8C8100B4AB42 /* DetailViewController+Table.swift */; };
 		E270482F21FD9F0700B4AB42 /* DetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E270482E21FD9F0700B4AB42 /* DetailCell.swift */; };
 		E270483121FDBF3400B4AB42 /* Data+HTML.swift in Sources */ = {isa = PBXBuildFile; fileRef = E270483021FDBF3400B4AB42 /* Data+HTML.swift */; };
@@ -94,6 +95,7 @@
 		E231FF1021F386A700537FF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ImageCollectionCell.xib; sourceTree = "<group>"; };
 		E231FF1221F3880900537FF4 /* ImageCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionView.swift; sourceTree = "<group>"; };
 		E231FF1421F38E5800537FF4 /* DetailViewController+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DetailViewController+Delegate.swift"; sourceTree = "<group>"; };
+		E26C99B322120CB7008565EE /* DKImageProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DKImageProvider.swift; sourceTree = "<group>"; };
 		E270482C21FD8C8100B4AB42 /* DetailViewController+Table.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DetailViewController+Table.swift"; sourceTree = "<group>"; };
 		E270482E21FD9F0700B4AB42 /* DetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCell.swift; sourceTree = "<group>"; };
 		E270483021FDBF3400B4AB42 /* Data+HTML.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+HTML.swift"; sourceTree = "<group>"; };
@@ -262,6 +264,7 @@
 				E28105DD21C75DB4008CCA25 /* GateCheckApiWorker.swift */,
 				E28105DF21C75DCD008CCA25 /* GateCheckApiTarget.swift */,
 				E20BF83D220A0415001790FC /* CheckListRowWorker.swift */,
+				E26C99B322120CB7008565EE /* DKImageProvider.swift */,
 			);
 			path = Workers;
 			sourceTree = "<group>";
@@ -434,6 +437,7 @@
 				"${BUILT_PRODUCTS_DIR}/DKPhotoGallery/DKPhotoGallery.framework",
 				"${BUILT_PRODUCTS_DIR}/FLAnimatedImage/FLAnimatedImage.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Material/Material.framework",
 				"${BUILT_PRODUCTS_DIR}/Motion/Motion.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
@@ -455,6 +459,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DKPhotoGallery.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FLAnimatedImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Material.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Motion.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
@@ -500,6 +505,7 @@
 				E28105F421C78E63008CCA25 /* DetailPresenter.swift in Sources */,
 				E28105BC21C75B96008CCA25 /* AppDelegate.swift in Sources */,
 				E20BF842220A2729001790FC /* TextFormCell.swift in Sources */,
+				E26C99B422120CB7008565EE /* DKImageProvider.swift in Sources */,
 				E231FF1521F38E5800537FF4 /* DetailViewController+Delegate.swift in Sources */,
 				E28105F821C78E63008CCA25 /* DetailViewController.swift in Sources */,
 				E279518121EA290400454B3D /* PaddingLabel.swift in Sources */,

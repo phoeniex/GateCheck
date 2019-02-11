@@ -36,9 +36,7 @@ extension DetailViewController: DetailCellDelegate {
     cellModel.isImagePanelHidden = isHidden
     detailCells[indexPath.row] = cellModel
     
-    tableView.beginUpdates()
-    tableView.endUpdates()
-    print("Update Row \(indexPath.row) to \(isHidden)")
+    tableView.reloadRows(at: [indexPath], with: .none)
   }
   
   func didToggleAdditionalPanel(_ cell: DetailCell, isHidden: Bool) {
@@ -50,9 +48,7 @@ extension DetailViewController: DetailCellDelegate {
     cellModel.isAdditionalPanelHidden = isHidden
     detailCells[indexPath.row] = cellModel
     
-    tableView.beginUpdates()
-    tableView.endUpdates()
-    print("Update Note Row \(indexPath.row) to \(isHidden)")
+    tableView.reloadRows(at: [indexPath], with: .none)
   }
   
   func didValueChanged(_ cell: DetailCell) {

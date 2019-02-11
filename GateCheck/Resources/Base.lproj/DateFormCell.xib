@@ -60,7 +60,7 @@
                     <constraint firstItem="tb0-C0-msd" firstAttribute="top" secondItem="Jio-u5-5bz" secondAttribute="top" constant="8" id="ein-G1-ryW"/>
                 </constraints>
             </tableViewCellContentView>
-            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="dateTextField" destination="BrS-kZ-vUg" id="gnO-e4-D0t"/>
                 <outlet property="iconImageView" destination="AFe-MI-aOd" id="HmG-Xs-qzh"/>

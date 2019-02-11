@@ -27,7 +27,7 @@ extension CheckListDetail {
   }
   
   var fileObjects: [String] {
-    return fileValue.components(separatedBy: ",")
+    return fileValue.components(separatedBy: ",").filter { $0.isEmpty == false }
   }
   
   func getPlaceHolderObject(_ placeHolderString: String) -> [String: String] {
@@ -86,6 +86,7 @@ extension CheckListDetail {
     var cellModel = SignatureCellModel()
     cellModel.title = title
     cellModel.approver = approverValue
+    cellModel.imageUrls = fileObjects
     return cellModel
   }
   
@@ -137,6 +138,7 @@ extension CheckListDetail {
     
     cellModel.note = textValue
     cellModel.approver = approverValue
+    cellModel.imageUrls = fileObjects
     
     return cellModel
   }

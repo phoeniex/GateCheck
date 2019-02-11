@@ -8,6 +8,7 @@
 
 import UIKit
 import Material
+import Kingfisher
 
 struct MultipleChoicesQuestionCellModel: ImageExpanableCellModel {
   var type: RowType
@@ -41,6 +42,7 @@ class MultipleChoicesQuestionCell: ImageExpanableCell {
   
   @IBOutlet weak var noteTextField: TextField!
   @IBOutlet weak var usernameTextField: TextField!
+  @IBOutlet weak var additionalFieldView: UIView!
   @IBOutlet weak var choiceSegmentControl: UISegmentedControl!
   @IBOutlet weak var approvalSegmentControl: UISegmentedControl!
   
@@ -60,7 +62,7 @@ class MultipleChoicesQuestionCell: ImageExpanableCell {
     super.awakeFromNib()
     
     standardHeight = 74
-    additionalFormExpandedHeight = 30
+    additionalFormExpandedHeight = 38
     height = 74
     
     noteTextField.dividerActiveColor = #colorLiteral(red: 0, green: 0.3607843137, blue: 0.5647058824, alpha: 1)
@@ -81,8 +83,7 @@ class MultipleChoicesQuestionCell: ImageExpanableCell {
   }
   
   func setAdditionalFieldHidden(_ isHidden: Bool) {
-    usernameTextField.isHidden = isHidden
-    noteTextField.isHidden = isHidden
+    additionalFieldView.isHidden = isHidden
   }
   
   override func displayCell(_ cellModel: DetailCellModel) {
@@ -98,7 +99,8 @@ class MultipleChoicesQuestionCell: ImageExpanableCell {
     displayRadioBox(approvalSegmentControl, choices: cellModel.approvalChoices)
     approvalSegmentControl.selectedSegmentIndex = cellModel.approvalSelected ?? UISegmentedControl.noSegment
     
-    setImagePanelHidden(cellModel.isImagePanelHidden, animated: false)
+    urlImages = cellModel.imageUrls
+    displayImages()
   }
   
   func displayRadioBox(_ radioBox: UISegmentedControl, choices: [String]) {

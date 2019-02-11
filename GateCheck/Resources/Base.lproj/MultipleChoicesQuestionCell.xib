@@ -11,15 +11,15 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="MultipleChoicesQuestionCell" rowHeight="212" id="I5W-PJ-nzb" customClass="MultipleChoicesQuestionCell" customModule="GateCheck" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="448" height="212"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="MultipleChoicesQuestionCell" rowHeight="220" id="I5W-PJ-nzb" customClass="MultipleChoicesQuestionCell" customModule="GateCheck" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="448" height="220"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="I5W-PJ-nzb" id="ZVh-SD-kTq">
-                <rect key="frame" x="0.0" y="0.0" width="448" height="211.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="448" height="219.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="W6U-ld-aTq">
-                        <rect key="frame" x="0.0" y="8" width="448" height="195.5"/>
+                        <rect key="frame" x="0.0" y="8" width="448" height="203.5"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="caf-vH-Ayd">
                                 <rect key="frame" x="0.0" y="0.0" width="448" height="18"/>
@@ -57,17 +57,17 @@
                                         </connections>
                                     </segmentedControl>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U2X-GX-oHk">
-                                        <rect key="frame" x="274" y="16" width="120" height="16"/>
+                                        <rect key="frame" x="274" y="16" width="110" height="16"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="16" id="VuH-Rs-Csx"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hRE-HF-HLZ">
-                                        <rect key="frame" x="410" y="5" width="38" height="38"/>
+                                        <rect key="frame" x="400" y="5" width="48" height="38"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fih-iC-ZD6">
-                                                <rect key="frame" x="3" y="3" width="32" height="32"/>
+                                                <rect key="frame" x="8" y="3" width="32" height="32"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="32" id="TdX-tZ-zPb"/>
                                                     <constraint firstAttribute="width" constant="32" id="e89-Hd-eas"/>
@@ -83,7 +83,7 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9+" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3HK-k3-UuR">
-                                                <rect key="frame" x="21" y="3" width="14" height="14"/>
+                                                <rect key="frame" x="33" y="-4" width="14" height="14"/>
                                                 <color key="backgroundColor" red="0.81960784310000001" green="0.28627450980000002" blue="0.35686274509999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="14" id="04i-jh-2Po"/>
@@ -102,12 +102,12 @@
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="38" id="Chw-ur-u7c"/>
-                                            <constraint firstItem="3HK-k3-UuR" firstAttribute="trailing" secondItem="Fih-iC-ZD6" secondAttribute="trailing" id="F0t-4c-cHu"/>
+                                            <constraint firstAttribute="width" constant="48" id="Chw-ur-u7c"/>
+                                            <constraint firstItem="3HK-k3-UuR" firstAttribute="centerX" secondItem="Fih-iC-ZD6" secondAttribute="trailing" id="F0t-4c-cHu"/>
                                             <constraint firstAttribute="height" constant="38" id="J7T-7F-N2K"/>
                                             <constraint firstItem="Fih-iC-ZD6" firstAttribute="centerX" secondItem="hRE-HF-HLZ" secondAttribute="centerX" id="hI5-kl-yfc"/>
                                             <constraint firstItem="Fih-iC-ZD6" firstAttribute="centerY" secondItem="hRE-HF-HLZ" secondAttribute="centerY" id="jmh-DO-WSe"/>
-                                            <constraint firstItem="3HK-k3-UuR" firstAttribute="top" secondItem="Fih-iC-ZD6" secondAttribute="top" id="qYw-qg-hqu"/>
+                                            <constraint firstItem="3HK-k3-UuR" firstAttribute="centerY" secondItem="Fih-iC-ZD6" secondAttribute="top" id="qYw-qg-hqu"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -145,15 +145,18 @@
                                     </textField>
                                 </subviews>
                             </stackView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ewh-yX-Nnd">
-                                <rect key="frame" x="0.0" y="95.5" width="448" height="100"/>
+                            <view contentMode="scaleToFill" verticalHuggingPriority="500" verticalCompressionResistancePriority="700" translatesAutoresizingMaskIntoConstraints="NO" id="Ewh-yX-Nnd">
+                                <rect key="frame" x="0.0" y="95.5" width="448" height="108"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="G6y-65-rKL">
-                                        <rect key="frame" x="8" y="8" width="432" height="84"/>
+                                        <rect key="frame" x="0.0" y="8" width="448" height="100"/>
                                         <color key="backgroundColor" white="0.75" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="BlZ-q2-fjJ"/>
+                                        </constraints>
                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="UMY-YI-FJU">
                                             <size key="itemSize" width="84" height="84"/>
-                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="headerReferenceSize" width="8" height="8"/>
                                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         </collectionViewFlowLayout>
@@ -167,11 +170,11 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" priority="750" constant="100" id="Qfm-Vh-rBq"/>
-                                    <constraint firstAttribute="trailing" secondItem="G6y-65-rKL" secondAttribute="trailing" constant="8" id="QhD-Px-jWA"/>
+                                    <constraint firstAttribute="height" priority="750" constant="108" id="Qfm-Vh-rBq"/>
+                                    <constraint firstAttribute="trailing" secondItem="G6y-65-rKL" secondAttribute="trailing" id="QhD-Px-jWA"/>
                                     <constraint firstItem="G6y-65-rKL" firstAttribute="top" secondItem="Ewh-yX-Nnd" secondAttribute="top" constant="8" id="czd-fE-ZZy"/>
-                                    <constraint firstItem="G6y-65-rKL" firstAttribute="leading" secondItem="Ewh-yX-Nnd" secondAttribute="leading" constant="8" id="nCV-DG-NEs"/>
-                                    <constraint firstAttribute="bottom" secondItem="G6y-65-rKL" secondAttribute="bottom" constant="8" id="sxa-zo-sQV"/>
+                                    <constraint firstItem="G6y-65-rKL" firstAttribute="leading" secondItem="Ewh-yX-Nnd" secondAttribute="leading" id="nCV-DG-NEs"/>
+                                    <constraint firstAttribute="bottom" secondItem="G6y-65-rKL" secondAttribute="bottom" id="sxa-zo-sQV"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -185,8 +188,9 @@
                     <constraint firstItem="W6U-ld-aTq" firstAttribute="top" secondItem="ZVh-SD-kTq" secondAttribute="top" constant="8" id="lck-R0-kux"/>
                 </constraints>
             </tableViewCellContentView>
-            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
+                <outlet property="additionalFieldView" destination="d77-qv-szN" id="4Gc-jK-yZR"/>
                 <outlet property="approvalSegmentControl" destination="1pS-6s-FXs" id="e9k-6g-UHj"/>
                 <outlet property="choiceSegmentControl" destination="Mti-3E-nhj" id="Pxg-0Z-AFK"/>
                 <outlet property="imageBadgeLabel" destination="3HK-k3-UuR" id="7pq-kc-4m5"/>

@@ -64,7 +64,7 @@
                     <constraint firstAttribute="trailing" secondItem="QsQ-gX-g6g" secondAttribute="trailing" id="own-HX-P4T"/>
                 </constraints>
             </tableViewCellContentView>
-            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="checkButton" destination="C1L-CT-Q1s" id="XLX-pG-H2h"/>
                 <outlet property="textField" destination="bCj-Bp-8Zv" id="hUk-OC-pxR"/>

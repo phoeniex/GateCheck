@@ -46,6 +46,7 @@ PODS:
     - SDWebImage/GIF
   - FLAnimatedImage (1.0.12)
   - IQKeyboardManagerSwift (6.2.0)
+  - Kingfisher (5.1.0)
   - Material (2.16.4):
     - Material/Core (= 2.16.4)
   - Material/Core (2.16.4):
@@ -73,6 +74,7 @@ PODS:
 DEPENDENCIES:
   - DKImagePickerController
   - IQKeyboardManagerSwift
+  - Kingfisher
   - Material
   - Moya
   - SVProgressHUD
@@ -87,6 +89,7 @@ SPEC REPOS:
     - DKPhotoGallery
     - FLAnimatedImage
     - IQKeyboardManagerSwift
+    - Kingfisher
     - Material
     - Motion
     - Moya
@@ -105,6 +108,7 @@ SPEC CHECKSUMS:
   DKPhotoGallery: e5fc53899345c26af4374503dd249caabac7d26a
   FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
   IQKeyboardManagerSwift: b07ccf9d8cafe993dcd6cb794eb4ba34611a0c4e
+  Kingfisher: fcec238063d17404fca89bf0a850583211c4cbf6
   Material: 4ed78690b09ffd148b5ffab6b4367fb1d8da1cd3
   Motion: 153ba49692997888556c7a95207278a8b1f8be95
   Moya: cf730b3cd9e005401ef37a85143aa141a12fd38f
@@ -116,6 +120,6 @@ SPEC CHECKSUMS:
   TOCropViewController: 368d8df3ea43b62c3dc5a61f11b9048274d240bd
   YPDrawSignatureView: 0ca1cfcd329b9f4bf74172859f80a47a200a0e0d
 
-PODFILE CHECKSUM: 8aaa152c0f1e624701ee5aed8bd612749be9225b
+PODFILE CHECKSUM: b41d17c949040b6d163debda423b62fdb1d94aed
 
 COCOAPODS: 1.5.3

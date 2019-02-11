@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Kingfisher
+import DKImagePickerController
 
 extension ImageExpanableCell {
   
@@ -31,7 +33,19 @@ extension ImageExpanableCell: UICollectionViewDataSource {
       return UICollectionViewCell()
     }
     
-    cell.imageView.image = imageDisplayItems[indexPath.row]
+    cell.imageView.kf.indicatorType = .activity
+    cell.imageView.layer.cornerRadius = 4
+    cell.imageView.clipsToBounds = true
+    if let placeHolderImage = imageDisplayItems[indexPath.row] as? UIImage {
+      cell.imageView.image = placeHolderImage
+    } else if let urlImageString = imageDisplayItems[indexPath.row] as? String {
+      let url = GateCheckApiWorker().endpoint + "/upload/" + urlImageString
+      cell.imageView.kf.setImage(with: URL(string: url), options: [.processor(RoundCornerImageProcessor(cornerRadius: 4))])
+    } else if let localAsset = imageDisplayItems[indexPath.row] as? DKAsset {
+      let size = cell.imageView.bounds.size
+      cell.imageView.kf.setImage(with: DKImageProvider(asset: localAsset, size: size), options: [.processor(RoundCornerImageProcessor(cornerRadius: 4))])
+    }
+    
     return cell
   }
   
@@ -43,7 +57,7 @@ extension ImageExpanableCell: UICollectionViewDelegate {
     if indexPath.row == 0 {
       delegate?.willAddImage(self)
     } else {
-      delegate?.willOpenImage(self, image: images[indexPath.row])
+      //delegate?.willOpenImage(self, image: images[indexPath.row])
     }
   }
   

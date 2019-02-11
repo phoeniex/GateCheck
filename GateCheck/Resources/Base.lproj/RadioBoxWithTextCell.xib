@@ -64,6 +64,7 @@
                     <constraint firstItem="OMu-zl-hFD" firstAttribute="leading" secondItem="8Oz-yx-YQq" secondAttribute="leading" id="R1g-Fv-CCt"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="radioBoxSegmentedControl" destination="zbI-DY-7rT" id="xhZ-jR-PLm"/>
                 <outlet property="textField" destination="FrU-ku-zO6" id="FYI-Qt-jeL"/>
