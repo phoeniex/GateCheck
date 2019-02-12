@@ -21,7 +21,7 @@ enum RowType {
 
 protocol DetailCellDelegate: class {
   func willAddImage(_ cell: DetailCell)
-  func willOpenImage(_ cell: DetailCell, image: UIImage)
+  func willOpenImage(_ cell: DetailCell, image: Any)
   func didToggleImagePanel(_ cell: DetailCell, isHidden: Bool)
   func didToggleAdditionalPanel(_ cell: DetailCell, isHidden: Bool)
   func didValueChanged(_ cell: DetailCell)

@@ -25,6 +25,10 @@ class GateCheckApiWorker {
     set { UserDefaults.standard.set(newValue, forKey: "Endpoint") }
   }
   
+  func getImageUrl(_ imageName: String) -> String {
+    return endpoint + "/upload/" + imageName
+  }
+  
   func login(username: String, password: String, completion: @escaping (Result<Void, APIError>) -> Void) {
     let endpoint = self.endpoint
     provider.request(.logout(endpoint: endpoint)) { [weak self] (_) in

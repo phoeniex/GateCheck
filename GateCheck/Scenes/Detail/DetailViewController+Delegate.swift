@@ -8,24 +8,42 @@
 
 import UIKit
 import DKImagePickerController
+import Lightbox
 
 extension DetailViewController: DetailCellDelegate {
   
   func willAddImage(_ cell: DetailCell) {
+    guard let imageExpanableCell = cell as? ImageExpanableCell else { return }
     let imagePicker = DKImagePickerController()
-    let id = cell.rowId
     imagePicker.didSelectAssets = { [weak self] (assets) in
-      self?.updateImageFor(id: id, assets)
+      self?.updateImageFor(imageExpanableCell, assets: assets)
     }
     
     imagePicker.providesPresentationContextTransitionStyle = true
     imagePicker.definesPresentationContext = true
+    imagePicker.showsCancelButton = true
+    imagePicker.allowsLandscape = true
+    imagePicker.assetType = .allPhotos
     imagePicker.modalPresentationStyle = .formSheet
+    
+    imagePicker.setSelectedAssets(assets: imageExpanableCell.localImages)
     present(imagePicker, animated: true, completion: nil)
   }
   
-  func willOpenImage(_ cell: DetailCell, image: UIImage) {
+  func willOpenImage(_ cell: DetailCell, image: Any) {
+    var lightboxImage: [LightboxImage] = []
+    if let imageString = image as? String {
+      let urlString = GateCheckApiWorker().getImageUrl(imageString)
+      lightboxImage.append(LightboxImage(imageURL: URL(string: urlString)!))
+    }
     
+    LightboxConfig.DeleteButton.enabled = true
+    LightboxConfig.PageIndicator.enabled = false
+    let controller = LightboxController(images: lightboxImage)
+    controller.dynamicBackground = true
+    controller.dismissalDelegate = self
+    
+    present(controller, animated: true, completion: nil)
   }
   
   func didToggleImagePanel(_ cell: DetailCell, isHidden: Bool) {
@@ -54,6 +72,14 @@ extension DetailViewController: DetailCellDelegate {
   
   func didValueChanged(_ cell: DetailCell) {
     
+  }
+  
+}
+
+extension DetailViewController: LightboxControllerDismissalDelegate {
+  
+  func lightboxControllerWillDismiss(_ controller: LightboxController){
+    print(controller.images)
   }
   
 }

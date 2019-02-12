@@ -39,7 +39,7 @@ extension ImageExpanableCell: UICollectionViewDataSource {
     if let placeHolderImage = imageDisplayItems[indexPath.row] as? UIImage {
       cell.imageView.image = placeHolderImage
     } else if let urlImageString = imageDisplayItems[indexPath.row] as? String {
-      let url = GateCheckApiWorker().endpoint + "/upload/" + urlImageString
+      let url = GateCheckApiWorker().getImageUrl(urlImageString)
       cell.imageView.kf.setImage(with: URL(string: url), options: [.processor(RoundCornerImageProcessor(cornerRadius: 4))])
     } else if let localAsset = imageDisplayItems[indexPath.row] as? DKAsset {
       let size = cell.imageView.bounds.size
@@ -57,7 +57,7 @@ extension ImageExpanableCell: UICollectionViewDelegate {
     if indexPath.row == 0 {
       delegate?.willAddImage(self)
     } else {
-      //delegate?.willOpenImage(self, image: images[indexPath.row])
+      delegate?.willOpenImage(self, image: imageDisplayItems[indexPath.row])
     }
   }
   

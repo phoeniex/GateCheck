@@ -19,17 +19,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gate Check" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="flz-ni-u94">
-                                <rect key="frame" x="293" y="231" width="248" height="55"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="eGate Check" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="flz-ni-u94">
+                                <rect key="frame" x="280" y="215" width="274" height="55"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="46"/>
-                                <color key="textColor" red="0.0" green="0.36078431370000003" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JLF-YR-zQZ">
-                                <rect key="frame" x="171" y="406" width="492" height="300"/>
+                                <rect key="frame" x="155" y="390" width="524" height="332"/>
                                 <subviews>
+                                    <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9d9-BK-brv">
+                                        <rect key="frame" x="0.0" y="0.0" width="524" height="332"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="YId-YA-peZ">
+                                            <rect key="frame" x="0.0" y="0.0" width="524" height="332"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        </view>
+                                        <blurEffect style="extraLight"/>
+                                    </visualEffectView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="w6y-44-AIJ">
-                                        <rect key="frame" x="16" y="16" width="460" height="268"/>
+                                        <rect key="frame" x="32" y="32" width="460" height="268"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uzH-mB-IC1" customClass="TextField" customModule="Material">
                                                 <rect key="frame" x="0.0" y="0.0" width="460" height="30"/>
@@ -44,17 +52,16 @@
                                                     <userDefinedRuntimeAttribute type="color" keyPath="dividerColor">
                                                         <color key="value" red="0.0" green="0.23921568627450979" blue="0.35686274509803922" alpha="1" colorSpace="calibratedRGB"/>
                                                     </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="placeholderVerticalOffset">
-                                                        <real key="value" value="6"/>
-                                                    </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="textFieldCompleteEditedWithSender:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="c4c-TG-RdE"/>
                                                 </connections>
                                             </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jsb-KP-Tmi">
-                                                <rect key="frame" x="50" y="54" width="360" height="8"/>
+                                                <rect key="frame" x="214" y="54" width="32" height="8"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
+                                                    <constraint firstAttribute="width" constant="32" id="DBq-xl-hM9"/>
                                                     <constraint firstAttribute="height" constant="8" id="ZYK-2c-8Sf"/>
                                                 </constraints>
                                             </view>
@@ -72,7 +79,7 @@
                                                         <color key="value" red="0.0" green="0.23921568630000001" blue="0.35686274509999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="placeholderVerticalOffset">
-                                                        <real key="value" value="6"/>
+                                                        <integer key="value" value="2"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
@@ -142,14 +149,24 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="w6y-44-AIJ" firstAttribute="leading" secondItem="JLF-YR-zQZ" secondAttribute="leading" constant="16" id="8QX-Y4-4N1"/>
-                                    <constraint firstAttribute="trailing" secondItem="w6y-44-AIJ" secondAttribute="trailing" constant="16" id="MEj-nz-mJ2"/>
-                                    <constraint firstAttribute="bottom" secondItem="w6y-44-AIJ" secondAttribute="bottom" constant="16" id="a89-Ab-KJE"/>
-                                    <constraint firstItem="w6y-44-AIJ" firstAttribute="top" secondItem="JLF-YR-zQZ" secondAttribute="top" constant="16" id="gME-7t-cAs"/>
+                                    <constraint firstItem="w6y-44-AIJ" firstAttribute="leading" secondItem="JLF-YR-zQZ" secondAttribute="leading" constant="32" id="8QX-Y4-4N1"/>
+                                    <constraint firstAttribute="trailing" secondItem="w6y-44-AIJ" secondAttribute="trailing" constant="32" id="MEj-nz-mJ2"/>
+                                    <constraint firstItem="9d9-BK-brv" firstAttribute="leading" secondItem="JLF-YR-zQZ" secondAttribute="leading" id="Oqp-23-COP"/>
+                                    <constraint firstAttribute="bottom" secondItem="w6y-44-AIJ" secondAttribute="bottom" constant="32" id="a89-Ab-KJE"/>
+                                    <constraint firstItem="w6y-44-AIJ" firstAttribute="top" secondItem="JLF-YR-zQZ" secondAttribute="top" constant="32" id="gME-7t-cAs"/>
+                                    <constraint firstAttribute="bottom" secondItem="9d9-BK-brv" secondAttribute="bottom" id="t2f-FO-cq9"/>
+                                    <constraint firstAttribute="trailing" secondItem="9d9-BK-brv" secondAttribute="trailing" id="vBh-5M-J3B"/>
+                                    <constraint firstItem="9d9-BK-brv" firstAttribute="top" secondItem="JLF-YR-zQZ" secondAttribute="top" id="y3l-3f-0YH"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" red="0.0" green="0.36078431372549019" blue="0.56470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="JLF-YR-zQZ" firstAttribute="top" secondItem="flz-ni-u94" secondAttribute="bottom" constant="120" id="9V4-kt-TiT"/>
                             <constraint firstItem="flz-ni-u94" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="E1V-7d-POO"/>
@@ -167,7 +184,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1055" y="-785"/>
+            <point key="canvasLocation" x="-1055.3956834532376" y="-785.07194244604318"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="8ep-8e-mOd">
@@ -288,13 +305,13 @@
                                             <rect key="frame" x="30" y="8" width="282" height="83.5"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ZbD-JV-trW">
-                                                    <rect key="frame" x="0.0" y="0.0" width="282" height="34"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="282" height="30"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="bv4-Xl-pgg">
-                                                            <rect key="frame" x="0.0" y="0.0" width="37" height="34"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="33" height="30"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oFV-YP-Eib" customClass="PaddingLabel" customModule="GateCheck" customModuleProvider="target">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="37" height="16"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="33" height="16"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -314,7 +331,7 @@
                                                                     </userDefinedRuntimeAttributes>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZKc-GI-l1U" customClass="PaddingLabel" customModule="GateCheck" customModuleProvider="target">
-                                                                    <rect key="frame" x="0.0" y="18" width="35.5" height="16"/>
+                                                                    <rect key="frame" x="0.0" y="18" width="27.5" height="12"/>
                                                                     <color key="backgroundColor" red="0.89803921568627454" green="0.70588235294117641" blue="0.45490196078431372" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="10"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -342,7 +359,7 @@
                                                             <color key="backgroundColor" red="0.0" green="0.30588235289999999" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                                                         </stackView>
                                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Seb-we-1w9" customClass="PaddingLabel" customModule="GateCheck" customModuleProvider="target">
-                                                            <rect key="frame" x="231" y="0.0" width="51" height="34"/>
+                                                            <rect key="frame" x="247" y="0.0" width="35" height="30"/>
                                                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
                                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>

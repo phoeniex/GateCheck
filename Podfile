@@ -1,5 +1,6 @@
 platform :ios, '10.0'
 
+
 target 'GateCheck' do
   use_frameworks!
 
@@ -11,5 +12,6 @@ target 'GateCheck' do
   pod 'SwiftRuler'
   pod 'YPDrawSignatureView'
   pod 'Kingfisher'
+  pod 'Lightbox'
   
 end

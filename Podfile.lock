@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.8.0)
+  - Cache (5.2.0)
   - DKCamera (1.6.4)
   - DKImagePickerController (4.1.2):
     - DKImagePickerController/Camera (= 4.1.2)
@@ -45,8 +46,12 @@ PODS:
   - DKPhotoGallery/Resource (0.0.11):
     - SDWebImage/GIF
   - FLAnimatedImage (1.0.12)
+  - Imaginary (4.2.0):
+    - Cache (~> 5.0)
   - IQKeyboardManagerSwift (6.2.0)
   - Kingfisher (5.1.0)
+  - Lightbox (2.3.0):
+    - Imaginary (~> 4.0)
   - Material (2.16.4):
     - Material/Core (= 2.16.4)
   - Material/Core (2.16.4):
@@ -75,6 +80,7 @@ DEPENDENCIES:
   - DKImagePickerController
   - IQKeyboardManagerSwift
   - Kingfisher
+  - Lightbox
   - Material
   - Moya
   - SVProgressHUD
@@ -84,12 +90,15 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - Cache
     - DKCamera
     - DKImagePickerController
     - DKPhotoGallery
     - FLAnimatedImage
+    - Imaginary
     - IQKeyboardManagerSwift
     - Kingfisher
+    - Lightbox
     - Material
     - Motion
     - Moya
@@ -103,12 +112,15 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
+  Cache: 807c5d86d01a177f06ede9865add3aea269bbfd4
   DKCamera: 61fa47629a39354e5111bca1fe96695de020dcb9
   DKImagePickerController: 358ebcd5ce87db8863ec4b8dea651c67baca36e0
   DKPhotoGallery: e5fc53899345c26af4374503dd249caabac7d26a
   FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
+  Imaginary: dae33d06dbc2ada22f98afef5eb45cc061311a2c
   IQKeyboardManagerSwift: b07ccf9d8cafe993dcd6cb794eb4ba34611a0c4e
   Kingfisher: fcec238063d17404fca89bf0a850583211c4cbf6
+  Lightbox: d317750e4132bfb871a5307cfe0a2c7d6a583c65
   Material: 4ed78690b09ffd148b5ffab6b4367fb1d8da1cd3
   Motion: 153ba49692997888556c7a95207278a8b1f8be95
   Moya: cf730b3cd9e005401ef37a85143aa141a12fd38f
@@ -120,6 +132,6 @@ SPEC CHECKSUMS:
   TOCropViewController: 368d8df3ea43b62c3dc5a61f11b9048274d240bd
   YPDrawSignatureView: 0ca1cfcd329b9f4bf74172859f80a47a200a0e0d
 
-PODFILE CHECKSUM: b41d17c949040b6d163debda423b62fdb1d94aed
+PODFILE CHECKSUM: 12d6811523eb9160df02a8d0a318dc27f7c80f7c
 
 COCOAPODS: 1.5.3
