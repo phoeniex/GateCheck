@@ -28,7 +28,7 @@ extension ImageExpanableCell: UICollectionViewDataSource {
   
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     guard
-      let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ImageCell", for: indexPath) as? imageCollectionView
+      let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ImageCell", for: indexPath) as? ImageCollectionView
     else {
       return UICollectionViewCell()
     }
@@ -36,6 +36,7 @@ extension ImageExpanableCell: UICollectionViewDataSource {
     cell.imageView.kf.indicatorType = .activity
     cell.imageView.layer.cornerRadius = 4
     cell.imageView.clipsToBounds = true
+    cell.delegate = self
     if let placeHolderImage = imageDisplayItems[indexPath.row] as? UIImage {
       cell.imageView.image = placeHolderImage
     } else if let urlImageString = imageDisplayItems[indexPath.row] as? String {
@@ -58,6 +59,19 @@ extension ImageExpanableCell: UICollectionViewDelegate {
       delegate?.willAddImage(self)
     } else {
       delegate?.willOpenImage(self, image: imageDisplayItems[indexPath.row])
+    }
+  }
+  
+}
+
+extension ImageExpanableCell: ImageCollectionViewDelegate {
+  
+  func willDeleteImage(cell: ImageCollectionView) {
+    guard let indexPath = imageCollectionView.indexPath(for: cell) else { return }
+    if let urlImageString = imageDisplayItems[indexPath.row] as? String {
+      urlImages = urlImages.filter { $0 != urlImageString }
+    } else if let localAsset = imageDisplayItems[indexPath.row] as? DKAsset {
+      localImages = localImages.filter { $0 != localAsset }
     }
   }
   
